@@ -1,8 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Eye } from "lucide-react";
 
+interface FormData {
+  firstName: string;
+  lastName: string;
+  location: string;
+  title: string;
+  company: string;
+  email: string;
+  phone: string;
+}
+
 interface TemplateSelectionProps {
-  formData: any;
+  formData: FormData;
   onTemplateSelect?: (templateName: string) => void;
   onBack?: () => void;
 }
@@ -40,7 +50,7 @@ const TemplateSelection = ({ formData, onTemplateSelect, onBack }: TemplateSelec
     });
     console.groupEnd();
     
-    const filledFields = Object.values(formData).filter((value: any) => value && value.toString().trim() !== '').length;
+    const filledFields = Object.values(formData).filter((value: string) => value && value.trim() !== '').length;
     const totalFields = Object.keys(formData).length;
     const completionPercentage = Math.round((filledFields / totalFields) * 100);
     

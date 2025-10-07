@@ -21,7 +21,7 @@ const AboutForm = ({ formData, onInputChange, validationErrors = [] }: AboutForm
         <h1 className="text-3xl font-bold text-gray-900 mb-3">
           Tell us a bit about yourself
         </h1>
-        <p className="text-sm text-gray-500">We'll use this info to build your page.</p>
+        <p className="text-sm text-gray-500">We&apos;ll use this info to build your page.</p>
       </div>
 
       <div className="space-y-6">
