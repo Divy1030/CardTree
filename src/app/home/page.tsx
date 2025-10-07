@@ -46,7 +46,7 @@ function Home() {
       if (step1Errors.length > 0) {
         setValidationErrors(step1Errors);
         setShowValidation(true);
-        console.warn("❌ Step 1 Validation Failed:", step1Errors);
+
         return;
       }
       
@@ -73,7 +73,7 @@ function Home() {
       setValidationErrors([]);
       setShowValidation(false);
       
-      console.log("✅ Complete Form Data (Validated):", formData);
+     
       setCurrentStep(3);
     }
   };
@@ -82,7 +82,7 @@ function Home() {
     setCurrentStep(step);
     setValidationErrors([]);
     setShowValidation(false);
-    console.log(`Navigated to Step ${step}`);
+   
   };
 
   const handleBack = () => {
